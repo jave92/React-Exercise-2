@@ -26,15 +26,10 @@ const App = () => {
     const copy = [...points];
     copy[n] += 1;
     setPoints(copy);
-    /*************************¿Por qué no lo renderiza si lo hago de esta forma?***********************/
-    // setMostVoted(
-    //   points.indexOf(Math.max(...points))
-    // )
+    setMostVoted(
+      copy.indexOf(Math.max(...copy))
+    )
   }
-
-  useEffect(() => {    
-    setMostVoted(points.indexOf(Math.max(...points)))
-  }, [points]);
 
   
 
